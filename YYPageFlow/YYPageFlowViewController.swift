@@ -25,6 +25,7 @@ open class YYPageFlowViewController : UIViewController, UICollectionViewDelegate
         flow.minimumLineSpacing = edgeInset;
         flow.minimumInteritemSpacing = edgeInset;
         flow.sectionInset = UIEdgeInsets(top: 20, left: edgeInset, bottom: 20, right: edgeInset)
+        flow.delegate = self
         
         return flow
     }()
@@ -82,7 +83,7 @@ open class YYPageFlowViewController : UIViewController, UICollectionViewDelegate
     
 //MARK: YYPageFlowLayoutDelegate
     func layout(_ flowLayout: UICollectionViewLayout, didChangeIndex index: Int) {
-        //
+        print("index change to \(index)")
     }
     
 //MARK: UICollectionViewDelegate, datasource
@@ -139,6 +140,8 @@ fileprivate protocol YYPageFlowLayoutDelegate {
 
 open class YYPageFLowLayout : UICollectionViewFlowLayout {
     var index = 0
+    fileprivate var delegate:YYPageFlowLayoutDelegate?
+    
     
     open override var collectionViewContentSize: CGSize {
         return super.collectionViewContentSize
@@ -199,7 +202,7 @@ open class YYPageFLowLayout : UICollectionViewFlowLayout {
         let indexPathNow:NSIndexPath? = self.collectionView?.indexPathForItem(at: currentItemCenter) as NSIndexPath?
         if indexPathNow?.row != index {
             index = (indexPathNow?.row)!
-            print("index change to \(index)")
+            self.delegate?.layout(self, didChangeIndex: index)
         }
         
         
