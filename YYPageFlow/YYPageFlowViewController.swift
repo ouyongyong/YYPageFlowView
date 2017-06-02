@@ -43,6 +43,7 @@ open class YYPageFlowViewController : UIViewController, UICollectionViewDelegate
         banner.register(UINib.init(nibName: cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         banner.contentInset = UIEdgeInsets(top: 0, left: (rect.size.width - cardSize.width)/2 - edgeInset, bottom: 0, right: (rect.size.width - cardSize.width)/2-edgeInset)
         banner.decelerationRate = UIScrollViewDecelerationRateFast
+    
 //        banner.isPagingEnabled = true
         return banner
     }()
