@@ -13,7 +13,7 @@ let cellIdentifier = "cellIdentifier"
 let edgeInset:CGFloat = 0
 let cardSize = CGSize(width: UIScreen.main.bounds.size.width*0.7, height: UIScreen.main.bounds.size.width*0.7*(380/524))
 
-open class YYPageFlowViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+open class YYPageFlowViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, YYPageFlowLayoutDelegate {
     
     var originOffset:CGPoint = CGPoint.zero
     open var detailVC:UIViewController = UIViewController()
@@ -80,6 +80,10 @@ open class YYPageFlowViewController : UIViewController, UICollectionViewDelegate
         self.view.addGestureRecognizer(ges)
     }
     
+//MARK: YYPageFlowLayoutDelegate
+    func layout(_ flowLayout: UICollectionViewLayout, didChangeIndex index: Int) {
+        //
+    }
     
 //MARK: UICollectionViewDelegate, datasource
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -129,8 +133,9 @@ open class YYPageFlowViewController : UIViewController, UICollectionViewDelegate
 
 
 //MARK:YYPageFlowLayout
-let zoomScale:CGFloat = 1.45
-let minZoomScale:CGFloat = zoomScale - 1.0
+fileprivate protocol YYPageFlowLayoutDelegate {
+    func layout(_ flowLayout : UICollectionViewLayout, didChangeIndex index : Int) -> Void
+}
 
 open class YYPageFLowLayout : UICollectionViewFlowLayout {
     var index = 0
