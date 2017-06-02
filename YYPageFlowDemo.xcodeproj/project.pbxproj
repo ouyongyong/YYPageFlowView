@@ -14,6 +14,8 @@
 		8CCFEEF31EE00B8600DD037B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCFEEF11EE00B8600DD037B /* LaunchScreen.storyboard */; };
 		8CCFEEFE1EE00B8600DD037B /* YYPageFlowDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFEEFD1EE00B8600DD037B /* YYPageFlowDemoTests.swift */; };
 		8CCFEF091EE00B8600DD037B /* YYPageFlowDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFEF081EE00B8600DD037B /* YYPageFlowDemoUITests.swift */; };
+		8CCFEF181EE00C4400DD037B /* YYPageFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFEF171EE00C4400DD037B /* YYPageFlowViewController.swift */; };
+		8CCFEF1A1EE01DFA00DD037B /* cellIdentifier.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCFEF191EE01DFA00DD037B /* cellIdentifier.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8CCFEF041EE00B8600DD037B /* YYPageFlowDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYPageFlowDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCFEF081EE00B8600DD037B /* YYPageFlowDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPageFlowDemoUITests.swift; sourceTree = "<group>"; };
 		8CCFEF0A1EE00B8600DD037B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCFEF171EE00C4400DD037B /* YYPageFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPageFlowViewController.swift; sourceTree = "<group>"; };
+		8CCFEF191EE01DFA00DD037B /* cellIdentifier.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellIdentifier.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				8CCFEEE81EE00B8600DD037B /* AppDelegate.swift */,
 				8CCFEEEA1EE00B8600DD037B /* ViewController.swift */,
+				8CCFEF161EE00B9400DD037B /* YYPageFLowViewController */,
 				8CCFEEEC1EE00B8600DD037B /* Main.storyboard */,
 				8CCFEEEF1EE00B8600DD037B /* Assets.xcassets */,
 				8CCFEEF11EE00B8600DD037B /* LaunchScreen.storyboard */,
@@ -123,6 +128,15 @@
 				8CCFEF0A1EE00B8600DD037B /* Info.plist */,
 			);
 			path = YYPageFlowDemoUITests;
+			sourceTree = "<group>";
+		};
+		8CCFEF161EE00B9400DD037B /* YYPageFLowViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8CCFEF171EE00C4400DD037B /* YYPageFlowViewController.swift */,
+				8CCFEF191EE01DFA00DD037B /* cellIdentifier.xib */,
+			);
+			name = YYPageFLowViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,7 @@
 			files = (
 				8CCFEEF31EE00B8600DD037B /* LaunchScreen.storyboard in Resources */,
 				8CCFEEF01EE00B8600DD037B /* Assets.xcassets in Resources */,
+				8CCFEF1A1EE01DFA00DD037B /* cellIdentifier.xib in Resources */,
 				8CCFEEEE1EE00B8600DD037B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCFEF181EE00C4400DD037B /* YYPageFlowViewController.swift in Sources */,
 				8CCFEEEB1EE00B8600DD037B /* ViewController.swift in Sources */,
 				8CCFEEE91EE00B8600DD037B /* AppDelegate.swift in Sources */,
 			);
